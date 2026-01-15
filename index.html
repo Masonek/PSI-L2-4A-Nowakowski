@@ -4,94 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Dominik Nowakowski</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f2f5;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            transition: background-color 0.5s ease;
-        }
-
-        .card {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-            transition: transform 0.3s ease, border 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        h1 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .info-box {
-            background-color: #eef2f6;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 15px;
-            text-align: left;
-        }
-
-        .info-box h3 {
-            margin: 0 0 5px 0;
-            font-size: 1.1em;
-            color: #2c3e50;
-        }
-
-        .info-box p {
-            margin: 0;
-            color: #555;
-            line-height: 1.4;
-        }
-
-        #dutch-btn {
-            background-color: #306998;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 1em;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-
-        #dutch-btn:hover {
-            background-color: #26557c;
-        }
-
-        body.dutch-mode {
-            background-color: #FFF5E6;
-        }
-
-        .card.dutch-mode-border {
-            border: 5px solid #FF9B00;
-        }
-
-        .highlight {
-            font-weight: bold;
-            color: #FF9B00;
-        }
     </style>
 </head>
 <body>
@@ -113,26 +27,6 @@
         <button id="dutch-btn">🇳🇱 Włącz tryb Holenderski</button>
     </div>
 
-    <script>
-        const button = document.getElementById('dutch-btn');
-        const body = document.body;
-        const card = document.getElementById('main-card');
-        const textSpan = document.getElementById('dutch-text');
-
-        button.addEventListener('click', function() {
-            body.classList.toggle('dutch-mode');
-            card.classList.toggle('dutch-mode-border');
-            textSpan.classList.toggle('highlight');
-
-            if (body.classList.contains('dutch-mode')) {
-                button.textContent = "🐍 Wróć do standardu";
-                button.style.backgroundColor = "#FF9B00";
-                alert("Gezellig! Teraz jest bardzo holendersko.");
-            } else {
-                button.textContent = "🇳🇱 Włącz tryb Holenderski";
-                button.style.backgroundColor = "#306998";
-            }
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
